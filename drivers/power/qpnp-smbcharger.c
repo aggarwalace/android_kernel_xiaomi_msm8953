@@ -40,6 +40,13 @@
 #include <linux/msm_bcl.h>
 #include <linux/ktime.h>
 #include "pmic-voter.h"
+#include <linux/thermal.h>
+#include <linux/device.h>
+  
+#ifdef CONFIG_FORCE_FAST_CHARGE
+#include <linux/fastcharge.h>
+#endif
+ 
 
 /* Mask/Bit helpers */
 #define _SMB_MASK(BITS, POS) \
