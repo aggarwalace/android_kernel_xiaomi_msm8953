@@ -1,1 +1,1 @@
-![Accent-kernel](https://raw.githubusercontent.com/aggarwalace/Accent_kernel_xiaomi_msm8956/cm-14.1/banner.png "Xiaomi Mi Max")
+![Accent-kernel](http://i.imgur.com/JBBh1Oj.png "Xiaomi Mi Max")
