@@ -2814,6 +2814,7 @@ static int set_dc_current_limit_vote_cb(struct device *dev,
 	return smbchg_set_dc_current_max(chip, icl_ma);
 }
 
+
 /*
  * set the usb charge path's maximum allowed current draw
  * that may be limited by the system's thermal level
@@ -2900,7 +2901,14 @@ static int smbchg_system_temp_level_set(struct smbchg_chip *chip,
 		}
 		goto out;
 	}
-
+/*Lets Add Fastcharge To Mido :v 
+	#ifdef CONFIG_FORCE_FAST_CHARGE
+ 	if (force_fast_charge)
+ 	current_limit = 900;
+ #endif
+ 	
+ 
+	
 	if (chip->therm_lvl_sel == 0) {
 		rc = vote(chip->usb_icl_votable, THERMAL_ICL_VOTER, false, 0);
 		if (rc < 0)
